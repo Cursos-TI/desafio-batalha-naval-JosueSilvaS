@@ -36,5 +36,51 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
+
+    int nav_hrt [3] = {3,3,3};
+    int nav_vtc [3] = {3,3,3};
+
+
+
+
+    int tabuleiro [10][10] ={
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0},
+        {0,0,0,0,0,0,0,0,0,0}
+        
+    };
+
+    // navio horizontal
+    for(int i = 1 , j = 0 ; i < 4 && j < 3; i++ , j++){
+        int linha = 8;
+        tabuleiro[linha][i] = nav_hrt[j];
+
+    }
+    
+    //navio vertical
+    for(int i = 4 , j = 0; i < 7 && j < 3 ; i++ , j++){
+        int coluna = 5;
+        tabuleiro[i][coluna] = nav_vtc[j];
+
+    }
+
+    for(int i = 0; i < 10 ; i++){
+        for(int j = 0; j < 10; j++){
+            printf(" %d ",tabuleiro[i][j]);
+           
+        }
+        printf("\n");
+    }
+
+   
+
+
     return 0;
 }
