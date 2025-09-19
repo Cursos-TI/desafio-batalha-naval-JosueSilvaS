@@ -36,6 +36,8 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
+    int nav_dig1[3] = {3,3,3};
+    int nav_diag[3] = {3,3,3};
 
     int nav_hrt [3] = {3,3,3};
     int nav_vtc [3] = {3,3,3};
@@ -56,6 +58,33 @@ int main() {
         {0,0,0,0,0,0,0,0,0,0}
         
     };
+    //diagonal1
+
+   // tabuleiro[0][9] = 3;
+   // tabuleiro[1][8] = 3;
+    //tabuleiro[2][7] = 3;
+
+    // for( int i = 0, j = 9 ; i < 3 && j > 6; i++ , j--){
+    //     for (int x = 0; x < 3; i++)
+    //     {
+    //         tabuleiro[i][j] = nav_dig1[x];
+    //     }
+        
+    // }
+    for(int x = 0 ; x < 3; x++){
+        for( int i = 0, j = 9 ; i < 3 && j > 6; i++ , j--){
+            tabuleiro[i][j] = nav_dig1[x];
+        }
+    }
+
+    // diag 2
+     for(int x = 0 ; x < 3; x++){
+        for( int i = 0, j = 0 ; i < 3 && j < 3; i++ , j++){
+            tabuleiro[i][j] = nav_diag[x];
+        }
+    }
+
+
 
     // navio horizontal
     for(int i = 1 , j = 0 ; i < 4 && j < 3; i++ , j++){
